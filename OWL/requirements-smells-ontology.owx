@@ -1,0 +1,3648 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/mayracastillo/ontologies/2023/8/requirements-smells-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/mayracastillo/ontologies/2023/8/requirements-smells-ontology">
+    <Prefix name="" IRI="http://www.semanticweb.org/mayracastillo/ontologies/2023/8/requirements-smells-ontology/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Atributo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CaracteristicaCalidad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CasoUso"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConceptoMedible"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CriterioAceptacion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CriterioDecision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EnfoqueMedicion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Escala"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FuncionMedicion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HistoriaUsuario"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Indicador"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InformacionRequerida"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MecanismoMedicion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medicion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medida"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MedidaBase"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MedidaDerivada"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModeloAnalisis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModeloCalidad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Olor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RequisitoSoftware"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UnidadMedida"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#A_DefinidoPor_M"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#CA_Aplica_MC"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#CA_PerteneceA_HU"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#CM_SeRelacionaCon_A"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#FM_Usa_MB"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#FM_Usa_MD"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HU_Tiene_CA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IR_AsociadaCon_R"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IR_AsociadoCon_CM"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IR_SatisfechaPor_I"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#I_CalculadoCon_MA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MA_Usa_CD"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MB_usa_MM"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MC_Asociado_CC"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MD_CalculadaCon_FM"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#M_SeExpresaEn_UM"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#M_Tiene_E"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#M_Usa_M"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#R_Aplica_MC"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#R_Depende_R"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#R_Tiene_A"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#R_Tiene_O"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#AtrDescripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#AtrNombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CasoUsoActores"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CasoUsoEscenarioPrincipal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CasoUsoEscenariosAlternativos"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CasoUsoPostcondiciones"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CasoUsoPrecondiciones"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ConMedDescripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ConMedNombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CritDecFormula"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CritDecNombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CrtroAcepDescripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CrtroAcepEstado"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#EnfMedNombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#EscalaDescripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#FuncMedFormula"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#InfReqDescripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#MecMedDescripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#MecMedNombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#MedicionResultado"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#MedidaDescripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#MedidaNombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ModAnalisisFormula"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ModCalDescripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ModCalNombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ReqSoftDescripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ReqSoftEstado"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ReqSoftNombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ReqSoftPrioridad"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#UniMedDescripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#olorMecanismoDeteccion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#olorUbicacion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac005"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac006"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac007"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac008"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac009"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac010"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac011"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac012"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac013"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac014"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac015"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac016"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac017"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac018"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac019"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carac020"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Model001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Model002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Model003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Model004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#atr005"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#atr006"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#atr007"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ca001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ca002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ca003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ca004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ca005"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ca006"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ca007"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#critdec001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cu001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#func001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#func002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#func003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hu001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hu002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ind001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ind002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ind003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#infreq001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#infreq002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#infreq003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#infreq004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ma001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ma002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ma003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mb001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mb002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mb003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mb004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#md001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#md002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#md003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mecan001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mecan002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion005"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion006"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion007"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion008"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion009"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion010"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion011"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion012"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion013"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion014"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion015"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion016"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion017"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion018"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion019"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion020"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion021"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion022"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion023"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion024"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion025"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion026"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion027"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion028"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion029"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicion030"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#olor001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#olor002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#olor003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#olor004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#um001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#um002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#um003"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <Class IRI="#ConceptoMedible"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CasoUso"/>
+        <Class IRI="#RequisitoSoftware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FuncionMedicion"/>
+        <Class IRI="#EnfoqueMedicion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HistoriaUsuario"/>
+        <Class IRI="#RequisitoSoftware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indicador"/>
+        <Class IRI="#Medida"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MecanismoMedicion"/>
+        <Class IRI="#EnfoqueMedicion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedidaBase"/>
+        <Class IRI="#Medida"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedidaDerivada"/>
+        <Class IRI="#Medida"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModeloAnalisis"/>
+        <Class IRI="#EnfoqueMedicion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Olor"/>
+        <Class IRI="#ConceptoMedible"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac005"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac007"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac008"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac009"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac011"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac012"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac014"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac017"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac019"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaracteristicaCalidad"/>
+        <NamedIndividual IRI="#Carac020"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModeloCalidad"/>
+        <NamedIndividual IRI="#Model001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModeloCalidad"/>
+        <NamedIndividual IRI="#Model002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModeloCalidad"/>
+        <NamedIndividual IRI="#Model003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModeloCalidad"/>
+        <NamedIndividual IRI="#Model004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Atributo"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Atributo"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Atributo"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CriterioAceptacion"/>
+        <NamedIndividual IRI="#ca001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CriterioAceptacion"/>
+        <NamedIndividual IRI="#ca002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CriterioAceptacion"/>
+        <NamedIndividual IRI="#ca003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CriterioAceptacion"/>
+        <NamedIndividual IRI="#ca004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CriterioAceptacion"/>
+        <NamedIndividual IRI="#ca005"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CriterioAceptacion"/>
+        <NamedIndividual IRI="#ca006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CriterioAceptacion"/>
+        <NamedIndividual IRI="#ca007"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CriterioDecision"/>
+        <NamedIndividual IRI="#critdec001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CasoUso"/>
+        <NamedIndividual IRI="#cu001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Escala"/>
+        <NamedIndividual IRI="#escala001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Escala"/>
+        <NamedIndividual IRI="#escala002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Escala"/>
+        <NamedIndividual IRI="#escala003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FuncionMedicion"/>
+        <NamedIndividual IRI="#func001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FuncionMedicion"/>
+        <NamedIndividual IRI="#func002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FuncionMedicion"/>
+        <NamedIndividual IRI="#func003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HistoriaUsuario"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HistoriaUsuario"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Indicador"/>
+        <NamedIndividual IRI="#ind001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Indicador"/>
+        <NamedIndividual IRI="#ind002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Indicador"/>
+        <NamedIndividual IRI="#ind003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InformacionRequerida"/>
+        <NamedIndividual IRI="#infreq001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InformacionRequerida"/>
+        <NamedIndividual IRI="#infreq002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InformacionRequerida"/>
+        <NamedIndividual IRI="#infreq003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InformacionRequerida"/>
+        <NamedIndividual IRI="#infreq004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModeloAnalisis"/>
+        <NamedIndividual IRI="#ma001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModeloAnalisis"/>
+        <NamedIndividual IRI="#ma002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModeloAnalisis"/>
+        <NamedIndividual IRI="#ma003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MedidaBase"/>
+        <NamedIndividual IRI="#mb001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MedidaBase"/>
+        <NamedIndividual IRI="#mb002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MedidaBase"/>
+        <NamedIndividual IRI="#mb003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MedidaBase"/>
+        <NamedIndividual IRI="#mb004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MedidaDerivada"/>
+        <NamedIndividual IRI="#md001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MedidaDerivada"/>
+        <NamedIndividual IRI="#md002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MedidaDerivada"/>
+        <NamedIndividual IRI="#md003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MecanismoMedicion"/>
+        <NamedIndividual IRI="#mecan001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MecanismoMedicion"/>
+        <NamedIndividual IRI="#mecan002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion005"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion007"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion008"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion009"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion011"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion012"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion014"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion017"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion019"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion020"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion021"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion022"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion023"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion024"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion025"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion026"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion027"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion029"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medicion"/>
+        <NamedIndividual IRI="#medicion030"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Olor"/>
+        <NamedIndividual IRI="#olor001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Olor"/>
+        <NamedIndividual IRI="#olor002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Olor"/>
+        <NamedIndividual IRI="#olor003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Olor"/>
+        <NamedIndividual IRI="#olor004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UnidadMedida"/>
+        <NamedIndividual IRI="#um001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UnidadMedida"/>
+        <NamedIndividual IRI="#um002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UnidadMedida"/>
+        <NamedIndividual IRI="#um003"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model001"/>
+        <NamedIndividual IRI="#Carac007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model001"/>
+        <NamedIndividual IRI="#Carac008"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model001"/>
+        <NamedIndividual IRI="#Carac009"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model001"/>
+        <NamedIndividual IRI="#Carac010"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model001"/>
+        <NamedIndividual IRI="#Carac011"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model001"/>
+        <NamedIndividual IRI="#Carac012"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model001"/>
+        <NamedIndividual IRI="#Carac013"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model001"/>
+        <NamedIndividual IRI="#Carac014"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model001"/>
+        <NamedIndividual IRI="#Carac015"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model003"/>
+        <NamedIndividual IRI="#Carac001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model003"/>
+        <NamedIndividual IRI="#Carac002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model003"/>
+        <NamedIndividual IRI="#Carac003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model003"/>
+        <NamedIndividual IRI="#Carac004"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model003"/>
+        <NamedIndividual IRI="#Carac005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model003"/>
+        <NamedIndividual IRI="#Carac006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model004"/>
+        <NamedIndividual IRI="#Carac016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model004"/>
+        <NamedIndividual IRI="#Carac017"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model004"/>
+        <NamedIndividual IRI="#Carac018"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model004"/>
+        <NamedIndividual IRI="#Carac019"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <NamedIndividual IRI="#Model004"/>
+        <NamedIndividual IRI="#Carac020"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#A_DefinidoPor_M"/>
+        <NamedIndividual IRI="#atr005"/>
+        <NamedIndividual IRI="#ind001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#A_DefinidoPor_M"/>
+        <NamedIndividual IRI="#atr005"/>
+        <NamedIndividual IRI="#mb001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#A_DefinidoPor_M"/>
+        <NamedIndividual IRI="#atr005"/>
+        <NamedIndividual IRI="#mb002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#A_DefinidoPor_M"/>
+        <NamedIndividual IRI="#atr005"/>
+        <NamedIndividual IRI="#md001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#A_DefinidoPor_M"/>
+        <NamedIndividual IRI="#atr006"/>
+        <NamedIndividual IRI="#ind002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#A_DefinidoPor_M"/>
+        <NamedIndividual IRI="#atr006"/>
+        <NamedIndividual IRI="#mb001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#A_DefinidoPor_M"/>
+        <NamedIndividual IRI="#atr006"/>
+        <NamedIndividual IRI="#mb003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#A_DefinidoPor_M"/>
+        <NamedIndividual IRI="#atr006"/>
+        <NamedIndividual IRI="#md002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#A_DefinidoPor_M"/>
+        <NamedIndividual IRI="#atr007"/>
+        <NamedIndividual IRI="#ind003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#A_DefinidoPor_M"/>
+        <NamedIndividual IRI="#atr007"/>
+        <NamedIndividual IRI="#mb001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#A_DefinidoPor_M"/>
+        <NamedIndividual IRI="#atr007"/>
+        <NamedIndividual IRI="#mb004"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#A_DefinidoPor_M"/>
+        <NamedIndividual IRI="#atr007"/>
+        <NamedIndividual IRI="#md003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CA_PerteneceA_HU"/>
+        <NamedIndividual IRI="#ca001"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CA_PerteneceA_HU"/>
+        <NamedIndividual IRI="#ca002"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CA_PerteneceA_HU"/>
+        <NamedIndividual IRI="#ca003"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CA_PerteneceA_HU"/>
+        <NamedIndividual IRI="#ca004"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CA_PerteneceA_HU"/>
+        <NamedIndividual IRI="#ca005"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CA_PerteneceA_HU"/>
+        <NamedIndividual IRI="#ca006"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CA_PerteneceA_HU"/>
+        <NamedIndividual IRI="#ca007"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#cu001"/>
+        <NamedIndividual IRI="#medicion011"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#cu001"/>
+        <NamedIndividual IRI="#medicion012"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#cu001"/>
+        <NamedIndividual IRI="#medicion013"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#cu001"/>
+        <NamedIndividual IRI="#medicion014"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#cu001"/>
+        <NamedIndividual IRI="#medicion015"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#cu001"/>
+        <NamedIndividual IRI="#medicion016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#cu001"/>
+        <NamedIndividual IRI="#medicion017"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#cu001"/>
+        <NamedIndividual IRI="#medicion018"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#cu001"/>
+        <NamedIndividual IRI="#medicion019"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#cu001"/>
+        <NamedIndividual IRI="#medicion020"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Tiene_A"/>
+        <NamedIndividual IRI="#cu001"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Tiene_A"/>
+        <NamedIndividual IRI="#cu001"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Tiene_A"/>
+        <NamedIndividual IRI="#cu001"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Tiene_O"/>
+        <NamedIndividual IRI="#cu001"/>
+        <NamedIndividual IRI="#olor001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Tiene_O"/>
+        <NamedIndividual IRI="#cu001"/>
+        <NamedIndividual IRI="#olor004"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#FM_Usa_MB"/>
+        <NamedIndividual IRI="#func001"/>
+        <NamedIndividual IRI="#mb001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#FM_Usa_MB"/>
+        <NamedIndividual IRI="#func001"/>
+        <NamedIndividual IRI="#mb002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#FM_Usa_MB"/>
+        <NamedIndividual IRI="#func002"/>
+        <NamedIndividual IRI="#mb001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#FM_Usa_MB"/>
+        <NamedIndividual IRI="#func002"/>
+        <NamedIndividual IRI="#mb003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#FM_Usa_MB"/>
+        <NamedIndividual IRI="#func003"/>
+        <NamedIndividual IRI="#mb001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#FM_Usa_MB"/>
+        <NamedIndividual IRI="#func003"/>
+        <NamedIndividual IRI="#mb004"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HU_Tiene_CA"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#ca001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HU_Tiene_CA"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#ca002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Aplica_MC"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#Model001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Aplica_MC"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#Model003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#medicion001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#medicion002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#medicion003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#medicion004"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#medicion005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#medicion006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#medicion007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#medicion008"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#medicion009"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#medicion010"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Tiene_A"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Tiene_A"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Tiene_A"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Tiene_O"/>
+        <NamedIndividual IRI="#hu001"/>
+        <NamedIndividual IRI="#olor001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HU_Tiene_CA"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#ca003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HU_Tiene_CA"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#ca004"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HU_Tiene_CA"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#ca005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HU_Tiene_CA"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#ca006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HU_Tiene_CA"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#ca007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Aplica_MC"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#Model001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Aplica_MC"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#Model003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#medicion021"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#medicion022"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#medicion023"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#medicion024"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#medicion025"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#medicion026"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#medicion027"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#medicion028"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#medicion029"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#medicion030"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Tiene_A"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Tiene_A"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Tiene_A"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#R_Tiene_O"/>
+        <NamedIndividual IRI="#hu002"/>
+        <NamedIndividual IRI="#olor001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#I_CalculadoCon_MA"/>
+        <NamedIndividual IRI="#ind001"/>
+        <NamedIndividual IRI="#ma001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeExpresaEn_UM"/>
+        <NamedIndividual IRI="#ind001"/>
+        <NamedIndividual IRI="#um003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Tiene_E"/>
+        <NamedIndividual IRI="#ind001"/>
+        <NamedIndividual IRI="#escala003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Usa_M"/>
+        <NamedIndividual IRI="#ind001"/>
+        <NamedIndividual IRI="#md001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#I_CalculadoCon_MA"/>
+        <NamedIndividual IRI="#ind002"/>
+        <NamedIndividual IRI="#ma002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeExpresaEn_UM"/>
+        <NamedIndividual IRI="#ind002"/>
+        <NamedIndividual IRI="#um003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Tiene_E"/>
+        <NamedIndividual IRI="#ind002"/>
+        <NamedIndividual IRI="#escala003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Usa_M"/>
+        <NamedIndividual IRI="#ind002"/>
+        <NamedIndividual IRI="#md002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#I_CalculadoCon_MA"/>
+        <NamedIndividual IRI="#ind003"/>
+        <NamedIndividual IRI="#ma003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeExpresaEn_UM"/>
+        <NamedIndividual IRI="#ind003"/>
+        <NamedIndividual IRI="#um003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Tiene_E"/>
+        <NamedIndividual IRI="#ind003"/>
+        <NamedIndividual IRI="#escala003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Usa_M"/>
+        <NamedIndividual IRI="#ind003"/>
+        <NamedIndividual IRI="#md003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_AsociadaCon_R"/>
+        <NamedIndividual IRI="#infreq001"/>
+        <NamedIndividual IRI="#cu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_AsociadaCon_R"/>
+        <NamedIndividual IRI="#infreq001"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_AsociadaCon_R"/>
+        <NamedIndividual IRI="#infreq001"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_AsociadoCon_CM"/>
+        <NamedIndividual IRI="#infreq001"/>
+        <NamedIndividual IRI="#olor001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_SatisfechaPor_I"/>
+        <NamedIndividual IRI="#infreq001"/>
+        <NamedIndividual IRI="#ind001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_SatisfechaPor_I"/>
+        <NamedIndividual IRI="#infreq001"/>
+        <NamedIndividual IRI="#ind002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_AsociadaCon_R"/>
+        <NamedIndividual IRI="#infreq002"/>
+        <NamedIndividual IRI="#cu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_AsociadaCon_R"/>
+        <NamedIndividual IRI="#infreq002"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_AsociadaCon_R"/>
+        <NamedIndividual IRI="#infreq002"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_AsociadoCon_CM"/>
+        <NamedIndividual IRI="#infreq002"/>
+        <NamedIndividual IRI="#olor002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_AsociadaCon_R"/>
+        <NamedIndividual IRI="#infreq003"/>
+        <NamedIndividual IRI="#cu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_AsociadaCon_R"/>
+        <NamedIndividual IRI="#infreq003"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_AsociadaCon_R"/>
+        <NamedIndividual IRI="#infreq003"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_AsociadoCon_CM"/>
+        <NamedIndividual IRI="#infreq003"/>
+        <NamedIndividual IRI="#olor003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_AsociadaCon_R"/>
+        <NamedIndividual IRI="#infreq004"/>
+        <NamedIndividual IRI="#cu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_AsociadaCon_R"/>
+        <NamedIndividual IRI="#infreq004"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_AsociadaCon_R"/>
+        <NamedIndividual IRI="#infreq004"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IR_SatisfechaPor_I"/>
+        <NamedIndividual IRI="#infreq004"/>
+        <NamedIndividual IRI="#ind003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MA_Usa_CD"/>
+        <NamedIndividual IRI="#ma001"/>
+        <NamedIndividual IRI="#critdec001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MA_Usa_CD"/>
+        <NamedIndividual IRI="#ma002"/>
+        <NamedIndividual IRI="#critdec001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MA_Usa_CD"/>
+        <NamedIndividual IRI="#ma003"/>
+        <NamedIndividual IRI="#critdec001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MB_usa_MM"/>
+        <NamedIndividual IRI="#mb001"/>
+        <NamedIndividual IRI="#mecan002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Tiene_E"/>
+        <NamedIndividual IRI="#mb001"/>
+        <NamedIndividual IRI="#escala001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MB_usa_MM"/>
+        <NamedIndividual IRI="#mb002"/>
+        <NamedIndividual IRI="#mecan001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeExpresaEn_UM"/>
+        <NamedIndividual IRI="#mb002"/>
+        <NamedIndividual IRI="#um001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Tiene_E"/>
+        <NamedIndividual IRI="#mb002"/>
+        <NamedIndividual IRI="#escala001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MB_usa_MM"/>
+        <NamedIndividual IRI="#mb003"/>
+        <NamedIndividual IRI="#mecan001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeExpresaEn_UM"/>
+        <NamedIndividual IRI="#mb003"/>
+        <NamedIndividual IRI="#um001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Tiene_E"/>
+        <NamedIndividual IRI="#mb003"/>
+        <NamedIndividual IRI="#escala001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MB_usa_MM"/>
+        <NamedIndividual IRI="#mb004"/>
+        <NamedIndividual IRI="#mecan001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeExpresaEn_UM"/>
+        <NamedIndividual IRI="#mb004"/>
+        <NamedIndividual IRI="#um001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Tiene_E"/>
+        <NamedIndividual IRI="#mb004"/>
+        <NamedIndividual IRI="#escala001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MD_CalculadaCon_FM"/>
+        <NamedIndividual IRI="#md001"/>
+        <NamedIndividual IRI="#func001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeExpresaEn_UM"/>
+        <NamedIndividual IRI="#md001"/>
+        <NamedIndividual IRI="#um002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Tiene_E"/>
+        <NamedIndividual IRI="#md001"/>
+        <NamedIndividual IRI="#escala002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MD_CalculadaCon_FM"/>
+        <NamedIndividual IRI="#md002"/>
+        <NamedIndividual IRI="#func002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeExpresaEn_UM"/>
+        <NamedIndividual IRI="#md002"/>
+        <NamedIndividual IRI="#um002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Tiene_E"/>
+        <NamedIndividual IRI="#md002"/>
+        <NamedIndividual IRI="#escala002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MD_CalculadaCon_FM"/>
+        <NamedIndividual IRI="#md003"/>
+        <NamedIndividual IRI="#func003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeExpresaEn_UM"/>
+        <NamedIndividual IRI="#md003"/>
+        <NamedIndividual IRI="#um002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Tiene_E"/>
+        <NamedIndividual IRI="#md003"/>
+        <NamedIndividual IRI="#escala002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Tiene_E"/>
+        <NamedIndividual IRI="#mecan001"/>
+        <NamedIndividual IRI="#escala001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeExpresaEn_UM"/>
+        <NamedIndividual IRI="#mecan002"/>
+        <NamedIndividual IRI="#um001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion001"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion001"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion001"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion001"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion001"/>
+        <NamedIndividual IRI="#mb001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion002"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion002"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion002"/>
+        <NamedIndividual IRI="#mb002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion003"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion003"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion003"/>
+        <NamedIndividual IRI="#mb003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion004"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion004"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion004"/>
+        <NamedIndividual IRI="#mb004"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion005"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion005"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion005"/>
+        <NamedIndividual IRI="#md001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion006"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion006"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion006"/>
+        <NamedIndividual IRI="#md002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion007"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion007"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion007"/>
+        <NamedIndividual IRI="#md003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion008"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion008"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion008"/>
+        <NamedIndividual IRI="#ind001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion009"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion009"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion009"/>
+        <NamedIndividual IRI="#ind002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion010"/>
+        <NamedIndividual IRI="#hu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion010"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion010"/>
+        <NamedIndividual IRI="#ind003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion011"/>
+        <NamedIndividual IRI="#cu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion011"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion011"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion011"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion011"/>
+        <NamedIndividual IRI="#mb001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion012"/>
+        <NamedIndividual IRI="#cu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion012"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion012"/>
+        <NamedIndividual IRI="#mb002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion013"/>
+        <NamedIndividual IRI="#cu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion013"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion013"/>
+        <NamedIndividual IRI="#mb003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion014"/>
+        <NamedIndividual IRI="#cu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion014"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion014"/>
+        <NamedIndividual IRI="#mb004"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion015"/>
+        <NamedIndividual IRI="#cu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion015"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion015"/>
+        <NamedIndividual IRI="#md001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion016"/>
+        <NamedIndividual IRI="#cu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion016"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion016"/>
+        <NamedIndividual IRI="#md002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion017"/>
+        <NamedIndividual IRI="#cu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion017"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion017"/>
+        <NamedIndividual IRI="#md003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion018"/>
+        <NamedIndividual IRI="#cu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion018"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion018"/>
+        <NamedIndividual IRI="#ind001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion019"/>
+        <NamedIndividual IRI="#cu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion019"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion019"/>
+        <NamedIndividual IRI="#ind002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion020"/>
+        <NamedIndividual IRI="#cu001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion020"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion020"/>
+        <NamedIndividual IRI="#ind003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion021"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion021"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion021"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion021"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion021"/>
+        <NamedIndividual IRI="#mb001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion022"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion022"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion022"/>
+        <NamedIndividual IRI="#mb002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion023"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion023"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion023"/>
+        <NamedIndividual IRI="#mb003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion024"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion024"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion024"/>
+        <NamedIndividual IRI="#mb004"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion025"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion025"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion025"/>
+        <NamedIndividual IRI="#md001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion026"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion026"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion026"/>
+        <NamedIndividual IRI="#md002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion027"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion027"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion027"/>
+        <NamedIndividual IRI="#md003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion028"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion028"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion028"/>
+        <NamedIndividual IRI="#ind001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion029"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion029"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion029"/>
+        <NamedIndividual IRI="#ind002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <NamedIndividual IRI="#medicion030"/>
+        <NamedIndividual IRI="#hu002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <NamedIndividual IRI="#medicion030"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <NamedIndividual IRI="#medicion030"/>
+        <NamedIndividual IRI="#ind003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CM_SeRelacionaCon_A"/>
+        <NamedIndividual IRI="#olor001"/>
+        <NamedIndividual IRI="#atr005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CM_SeRelacionaCon_A"/>
+        <NamedIndividual IRI="#olor001"/>
+        <NamedIndividual IRI="#atr006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <NamedIndividual IRI="#olor001"/>
+        <NamedIndividual IRI="#Carac004"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <NamedIndividual IRI="#olor001"/>
+        <NamedIndividual IRI="#Carac006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <NamedIndividual IRI="#olor001"/>
+        <NamedIndividual IRI="#Carac009"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <NamedIndividual IRI="#olor001"/>
+        <NamedIndividual IRI="#Carac014"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <NamedIndividual IRI="#olor001"/>
+        <NamedIndividual IRI="#Carac015"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <NamedIndividual IRI="#olor002"/>
+        <NamedIndividual IRI="#Carac004"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <NamedIndividual IRI="#olor002"/>
+        <NamedIndividual IRI="#Carac006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <NamedIndividual IRI="#olor002"/>
+        <NamedIndividual IRI="#Carac009"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <NamedIndividual IRI="#olor002"/>
+        <NamedIndividual IRI="#Carac014"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <NamedIndividual IRI="#olor003"/>
+        <NamedIndividual IRI="#Carac009"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <NamedIndividual IRI="#olor003"/>
+        <NamedIndividual IRI="#Carac015"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <NamedIndividual IRI="#olor003"/>
+        <NamedIndividual IRI="#Carac017"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CM_SeRelacionaCon_A"/>
+        <NamedIndividual IRI="#olor004"/>
+        <NamedIndividual IRI="#atr007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <NamedIndividual IRI="#olor004"/>
+        <NamedIndividual IRI="#Carac001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <NamedIndividual IRI="#olor004"/>
+        <NamedIndividual IRI="#Carac006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <NamedIndividual IRI="#olor004"/>
+        <NamedIndividual IRI="#Carac011"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac001"/>
+        <Literal>Independiente</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac002"/>
+        <Literal>Negociable</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac003"/>
+        <Literal>Valioso</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac004"/>
+        <Literal>Estimable</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac005"/>
+        <Literal>Pequeño</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac006"/>
+        <Literal>Testeable</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac007"/>
+        <Literal>Necesario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac008"/>
+        <Literal>Libre de detalles de implementación</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac009"/>
+        <Literal>No ambiguo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac010"/>
+        <Literal>Consistente</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac011"/>
+        <Literal>Completo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac012"/>
+        <Literal>Singular</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac013"/>
+        <Literal>Alcanzable</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac014"/>
+        <Literal>Trazable</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac015"/>
+        <Literal>Verificable</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac016"/>
+        <Literal>Específico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac017"/>
+        <Literal>Medible</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac018"/>
+        <Literal>Alcanzable</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac019"/>
+        <Literal>Realista</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#Carac020"/>
+        <Literal>Con duración limitada</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ModCalNombre"/>
+        <NamedIndividual IRI="#Model001"/>
+        <Literal>ISO 29148</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ModCalNombre"/>
+        <NamedIndividual IRI="#Model002"/>
+        <Literal>ISO 830</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ModCalNombre"/>
+        <NamedIndividual IRI="#Model003"/>
+        <Literal>INVEST</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ModCalNombre"/>
+        <NamedIndividual IRI="#Model004"/>
+        <Literal>SMART</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AtrDescripcion"/>
+        <NamedIndividual IRI="#atr005"/>
+        <Literal>Número de veces que aparece la palabra &lt;seguro&gt; en un texto, respecto a la cantidad de palabras</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AtrNombre"/>
+        <NamedIndividual IRI="#atr005"/>
+        <Literal>RatioPalabraSeguro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AtrDescripcion"/>
+        <NamedIndividual IRI="#atr006"/>
+        <Literal>Número de veces que aparece la palabra &lt;sficiente&gt; en un texto, respecto a la cantidad de palabras</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AtrNombre"/>
+        <NamedIndividual IRI="#atr006"/>
+        <Literal>RatioPalabraEficiente</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AtrDescripcion"/>
+        <NamedIndividual IRI="#atr007"/>
+        <Literal>Número de veces que aparece la expresión &lt;mejor que&gt; en un texto, respecto a la cantidad de palabras</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AtrNombre"/>
+        <NamedIndividual IRI="#atr007"/>
+        <Literal>RatioPalabraMejorQue</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CrtroAcepDescripcion"/>
+        <NamedIndividual IRI="#ca001"/>
+        <Literal>Dado que el cliente se encuentra en la página de login, cuando el cliente digite su usuario y contraseña, entonces el sistema valida las credenciales y decide si lo deja loguearseo nó.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CrtroAcepEstado"/>
+        <NamedIndividual IRI="#ca001"/>
+        <Literal>PENDIENTE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CrtroAcepDescripcion"/>
+        <NamedIndividual IRI="#ca002"/>
+        <Literal>Dado que el cliente registra credenciales inválidas, cuando el cliente quiera loguearse, entonces el sistema rechaza la solicitud de ingreso.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CrtroAcepEstado"/>
+        <NamedIndividual IRI="#ca002"/>
+        <Literal>PENDIENTE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CrtroAcepDescripcion"/>
+        <NamedIndividual IRI="#ca003"/>
+        <Literal>El usuario debe poder abrir la aplicación.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CrtroAcepEstado"/>
+        <NamedIndividual IRI="#ca003"/>
+        <Literal>PENDIENTE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CrtroAcepDescripcion"/>
+        <NamedIndividual IRI="#ca004"/>
+        <Literal>El usuario debe ser capaz de buscar restaurantes cercanos por nombre o tipo de comida de forma eficiente.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CrtroAcepEstado"/>
+        <NamedIndividual IRI="#ca004"/>
+        <Literal>PENDIENTE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CrtroAcepDescripcion"/>
+        <NamedIndividual IRI="#ca005"/>
+        <Literal>El usuario debe poder seleccionar un restaurante de la lista de resultados de forma eficiente.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CrtroAcepEstado"/>
+        <NamedIndividual IRI="#ca005"/>
+        <Literal>PENDIENTE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CrtroAcepDescripcion"/>
+        <NamedIndividual IRI="#ca006"/>
+        <Literal>El usuario debe ver un menú con opciones de comida y precios disponibles en el restaurante seleccionado de forma eficiente.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CrtroAcepEstado"/>
+        <NamedIndividual IRI="#ca006"/>
+        <Literal>PENDIENTE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CrtroAcepDescripcion"/>
+        <NamedIndividual IRI="#ca007"/>
+        <Literal>El usuario debe poder agregar al menos un plato al carrito de compras de forma eficiente.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CrtroAcepEstado"/>
+        <NamedIndividual IRI="#ca007"/>
+        <Literal>PENDIENTE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CritDecFormula"/>
+        <NamedIndividual IRI="#critdec001"/>
+        <Literal>If  P &gt; 10 -&gt; R = ‘Muy Alto’ 
+If 5 &lt; P ≤ 10 -&gt; R = ‘Alto’ 
+If 0 &lt; P ≤ 5 -&gt; R = ‘Medio’ 
+If P=0 -&gt; R = ‘Bajo’</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CritDecNombre"/>
+        <NamedIndividual IRI="#critdec001"/>
+        <Literal>Nivel segun porcentaje</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CasoUsoEscenarioPrincipal"/>
+        <NamedIndividual IRI="#cu001"/>
+        <Literal>El usuario descarga e instala la aplicación desde la tienda de aplicaciones.
+El usuario abre la aplicación móvil.
+El sistema presenta una pantalla de inicio o bienvenida con la opción &quot;Registrarse&quot; o &quot;Crear una cuenta&quot;.
+El usuario selecciona la opción &quot;Registrarse&quot;.
+El sistema muestra un formulario de registro con campos obligatorios, que incluyen nombre, dirección de correo electrónico y contraseña.
+El usuario completa el formulario ingresando su información personal y una contraseña segura.
+El usuario confirma la contraseña ingresándola nuevamente en un campo adicional.
+El usuario acepta los términos y condiciones de uso y la política de privacidad, si es necesario, marcando una casilla de verificación.
+El usuario hace clic en el botón &quot;Registrarse&quot; o una acción similar para enviar la información.
+El sistema verifica que la dirección de correo electrónico no esté asociada con otra cuenta existente en la aplicación.
+El sistema valida la contraseña ingresada para asegurarse de que cumple con los requisitos de seguridad (longitud, caracteres especiales, etc.).
+Si la dirección de correo electrónico y la contraseña son válidas, el sistema crea una nueva cuenta de usuario y almacena la información en la base de datos de la aplicación.
+El sistema redirige al usuario a la pantalla de inicio de sesión, donde puede ingresar su dirección de correo electrónico y contraseña recién registrados para acceder a la aplicación.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CasoUsoEscenariosAlternativos"/>
+        <NamedIndividual IRI="#cu001"/>
+        <Literal>Si la dirección de correo electrónico ya está asociada con una cuenta existente, el sistema muestra un mensaje de error y solicita al usuario que utilice una dirección de correo electrónico diferente o recupere su contraseña si la ha olvidado.
+Si la contraseña no cumple con los requisitos de seguridad, el sistema muestra un mensaje de error y solicita al usuario que elija una contraseña más segura.
+Si el usuario no acepta los términos y condiciones de uso y la política de privacidad, el sistema muestra un mensaje de error y solicita al usuario que acepte estos documentos antes de continuar.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CasoUsoPostcondiciones"/>
+        <NamedIndividual IRI="#cu001"/>
+        <Literal>El usuario ha completado con éxito el proceso de registro en la aplicación móvil y puede iniciar sesión en cualquier momento utilizando su dirección de correo electrónico y contraseña registrados.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CasoUsoPrecondiciones"/>
+        <NamedIndividual IRI="#cu001"/>
+        <Literal>El usuario debe haber descargado e instalado la aplicación en su dispositivo móvil y tener acceso a Internet.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ReqSoftDescripcion"/>
+        <NamedIndividual IRI="#cu001"/>
+        <Literal>Este caso de uso describe cómo un usuario puede registrarse en una aplicación móvil para acceder a sus funciones y servicios. El registro permite al usuario personalizar su experiencia, guardar datos y acceder a contenido exclusivo.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ReqSoftNombre"/>
+        <NamedIndividual IRI="#cu001"/>
+        <Literal>CU001-Registro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ReqSoftPrioridad"/>
+        <NamedIndividual IRI="#cu001"/>
+        <Literal>MEDIA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#EscalaDescripcion"/>
+        <NamedIndividual IRI="#escala001"/>
+        <Literal>Número entero positivo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#EscalaDescripcion"/>
+        <NamedIndividual IRI="#escala002"/>
+        <Literal>Número real entre 0 y 1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#EscalaDescripcion"/>
+        <NamedIndividual IRI="#escala003"/>
+        <Literal>Valor entre: ‘Muy Alto’, ‘Alto’, ‘Medio’, ‘Bajo’</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#EnfMedNombre"/>
+        <NamedIndividual IRI="#func001"/>
+        <Literal>Formula RSeg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FuncMedFormula"/>
+        <NamedIndividual IRI="#func001"/>
+        <Literal>RSeg=TP/TSeg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#EnfMedNombre"/>
+        <NamedIndividual IRI="#func002"/>
+        <Literal>Formula REfi</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FuncMedFormula"/>
+        <NamedIndividual IRI="#func002"/>
+        <Literal>REfi=TP/TEfi</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#EnfMedNombre"/>
+        <NamedIndividual IRI="#func003"/>
+        <Literal>Formula RMej</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FuncMedFormula"/>
+        <NamedIndividual IRI="#func003"/>
+        <Literal>RMej=TP/TMej</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ReqSoftDescripcion"/>
+        <NamedIndividual IRI="#hu001"/>
+        <Literal>Como Usuario quiero que la aplicación tenga un login seguro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ReqSoftNombre"/>
+        <NamedIndividual IRI="#hu001"/>
+        <Literal>HU001-Inicio de sesión</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ReqSoftPrioridad"/>
+        <NamedIndividual IRI="#hu001"/>
+        <Literal>BAJA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ReqSoftDescripcion"/>
+        <NamedIndividual IRI="#hu002"/>
+        <Literal>Como usuario, quiero poder realizar un pedido de comida a domicilio de forma eficiente para disfrutar de una comida sin tener que salir de casa.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ReqSoftNombre"/>
+        <NamedIndividual IRI="#hu002"/>
+        <Literal>HU002-Domicilios</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ReqSoftPrioridad"/>
+        <NamedIndividual IRI="#hu002"/>
+        <Literal>ALTA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaDescripcion"/>
+        <NamedIndividual IRI="#ind001"/>
+        <Literal>Cual es el nivel de aparición de la expresión &lt;seguro&gt;  en un texto</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaNombre"/>
+        <NamedIndividual IRI="#ind001"/>
+        <Literal>Indicador RSeg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaDescripcion"/>
+        <NamedIndividual IRI="#ind002"/>
+        <Literal>Cual es el nivel de aparición de la expresión &lt;eficiente&gt;  en un texto</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaNombre"/>
+        <NamedIndividual IRI="#ind002"/>
+        <Literal>Indicador REfi</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaDescripcion"/>
+        <NamedIndividual IRI="#ind003"/>
+        <Literal>Cual es el nivel de aparición de la expresión  &lt;mejor que&gt;  en un texto</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaNombre"/>
+        <NamedIndividual IRI="#ind003"/>
+        <Literal>Indicador RMej</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#InfReqDescripcion"/>
+        <NamedIndividual IRI="#infreq001"/>
+        <Literal>¿Cual es el nivel del olor lenguaje subjetivo en un requisito?</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#InfReqDescripcion"/>
+        <NamedIndividual IRI="#infreq002"/>
+        <Literal>¿Cual es el nivel del olor Adverbios y adjetivos ambiguo en un requisito?</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#InfReqDescripcion"/>
+        <NamedIndividual IRI="#infreq003"/>
+        <Literal>¿Cual es el nivel del olor lenguaje Superlativos en un requisito?</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#InfReqDescripcion"/>
+        <NamedIndividual IRI="#infreq004"/>
+        <Literal>¿Cual es el nivel del olor Frases comparativas en un requisito?</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#EnfMedNombre"/>
+        <NamedIndividual IRI="#ma001"/>
+        <Literal>modelo RSeg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ModAnalisisFormula"/>
+        <NamedIndividual IRI="#ma001"/>
+        <Literal>IndSeg = RSeg * 100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#EnfMedNombre"/>
+        <NamedIndividual IRI="#ma002"/>
+        <Literal>modelo REfi</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ModAnalisisFormula"/>
+        <NamedIndividual IRI="#ma002"/>
+        <Literal>IndREfi = REfi * 100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#EnfMedNombre"/>
+        <NamedIndividual IRI="#ma003"/>
+        <Literal>modelo RMej</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ModAnalisisFormula"/>
+        <NamedIndividual IRI="#ma003"/>
+        <Literal>IndRMej = RMej * 100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaDescripcion"/>
+        <NamedIndividual IRI="#mb001"/>
+        <Literal>Cantidad total de palabras</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaNombre"/>
+        <NamedIndividual IRI="#mb001"/>
+        <Literal>TP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaDescripcion"/>
+        <NamedIndividual IRI="#mb002"/>
+        <Literal>Número total de veces que aparece la palabra &lt;seguro&gt;  en un texto</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaNombre"/>
+        <NamedIndividual IRI="#mb002"/>
+        <Literal>TSeg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaDescripcion"/>
+        <NamedIndividual IRI="#mb003"/>
+        <Literal>Número total de veces que aparece la palabra &lt;eficiente&gt;  en un texto</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaNombre"/>
+        <NamedIndividual IRI="#mb003"/>
+        <Literal>TEfi</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaDescripcion"/>
+        <NamedIndividual IRI="#mb004"/>
+        <Literal>Número total de veces que aparece la expresión &lt;mejor que&gt;  en un texto</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaNombre"/>
+        <NamedIndividual IRI="#mb004"/>
+        <Literal>TMej</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaDescripcion"/>
+        <NamedIndividual IRI="#md001"/>
+        <Literal>Veces que aparece la palabra &lt;seguro&gt;  en un texto dividido entre total de palabras</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaNombre"/>
+        <NamedIndividual IRI="#md001"/>
+        <Literal>RSeg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaDescripcion"/>
+        <NamedIndividual IRI="#md002"/>
+        <Literal>Veces que aparece la palabra &lt;eficiente&gt;  en un texto dividido entre total de palabras</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaNombre"/>
+        <NamedIndividual IRI="#md002"/>
+        <Literal>REfi</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaDescripcion"/>
+        <NamedIndividual IRI="#md003"/>
+        <Literal>Veces que aparece la expresión &lt;mejor que&gt;  en un texto dividido entre total de palabras</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedidaNombre"/>
+        <NamedIndividual IRI="#md003"/>
+        <Literal>RMej</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#EnfMedNombre"/>
+        <NamedIndividual IRI="#mecan001"/>
+        <Literal>Diccionario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MecMedDescripcion"/>
+        <NamedIndividual IRI="#mecan001"/>
+        <Literal>Mecanismo basado en diccionarios</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#EnfMedNombre"/>
+        <NamedIndividual IRI="#mecan002"/>
+        <Literal>Contador</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MecMedDescripcion"/>
+        <NamedIndividual IRI="#mecan002"/>
+        <Literal>Contador básico de palabras</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion001"/>
+        <Literal>56</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion002"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion003"/>
+        <Literal>0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion004"/>
+        <Literal>0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion005"/>
+        <Literal>0,018</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion006"/>
+        <Literal>0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion007"/>
+        <Literal>0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion008"/>
+        <Literal>Medio</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion009"/>
+        <Literal>Bajo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion010"/>
+        <Literal>Bajo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion011"/>
+        <Literal>247</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion012"/>
+        <Literal>3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion013"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion014"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion015"/>
+        <Literal>0,012</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion016"/>
+        <Literal>0,004</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion017"/>
+        <Literal>0,004</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion018"/>
+        <Literal>Medio</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion019"/>
+        <Literal>Medio</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion020"/>
+        <Literal>Medio</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion021"/>
+        <Literal>60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion022"/>
+        <Literal>0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion023"/>
+        <Literal>5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion024"/>
+        <Literal>0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion025"/>
+        <Literal>0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion026"/>
+        <Literal>0,083</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion027"/>
+        <Literal>0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion028"/>
+        <Literal>Bajo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion029"/>
+        <Literal>Alto</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#MedicionResultado"/>
+        <NamedIndividual IRI="#medicion030"/>
+        <Literal>Bajo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#olor001"/>
+        <Literal>Lenguaje subjetivo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#olor002"/>
+        <Literal>Adverbios y adjetivos ambiguos</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#olor003"/>
+        <Literal>Superlativos</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ConMedNombre"/>
+        <NamedIndividual IRI="#olor004"/>
+        <Literal>Frases comparativas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#UniMedDescripcion"/>
+        <NamedIndividual IRI="#um001"/>
+        <Literal>Número de palabras</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#UniMedDescripcion"/>
+        <NamedIndividual IRI="#um002"/>
+        <Literal>Porcentaje de palabras</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#UniMedDescripcion"/>
+        <NamedIndividual IRI="#um003"/>
+        <Literal>Nivel de presencia en un texto</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#A_DefinidoPor_M"/>
+        <Class IRI="#Atributo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#CA_Aplica_MC"/>
+        <Class IRI="#CriterioAceptacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#CA_PerteneceA_HU"/>
+        <Class IRI="#CriterioAceptacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#CM_SeRelacionaCon_A"/>
+        <Class IRI="#ConceptoMedible"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#FM_Usa_MB"/>
+        <Class IRI="#FuncionMedicion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#FM_Usa_MD"/>
+        <Class IRI="#FuncionMedicion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HU_Tiene_CA"/>
+        <Class IRI="#HistoriaUsuario"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IR_AsociadaCon_R"/>
+        <Class IRI="#InformacionRequerida"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IR_AsociadoCon_CM"/>
+        <Class IRI="#InformacionRequerida"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IR_SatisfechaPor_I"/>
+        <Class IRI="#InformacionRequerida"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#I_CalculadoCon_MA"/>
+        <Class IRI="#Indicador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MA_Usa_CD"/>
+        <Class IRI="#ModeloAnalisis"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MB_usa_MM"/>
+        <Class IRI="#MedidaBase"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MC_Asociado_CC"/>
+        <Class IRI="#ModeloCalidad"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <Class IRI="#ModeloCalidad"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MD_CalculadaCon_FM"/>
+        <Class IRI="#MedidaDerivada"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <Class IRI="#Medicion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <Class IRI="#Medicion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <Class IRI="#Medicion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#M_SeExpresaEn_UM"/>
+        <Class IRI="#Medida"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#M_Tiene_E"/>
+        <Class IRI="#Medida"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#M_Usa_M"/>
+        <Class IRI="#Medida"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <Class IRI="#Olor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#R_Aplica_MC"/>
+        <Class IRI="#RequisitoSoftware"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <Class IRI="#RequisitoSoftware"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#R_Depende_R"/>
+        <Class IRI="#RequisitoSoftware"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#R_Tiene_A"/>
+        <Class IRI="#RequisitoSoftware"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#R_Tiene_O"/>
+        <Class IRI="#RequisitoSoftware"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#A_DefinidoPor_M"/>
+        <Class IRI="#Medida"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#CA_Aplica_MC"/>
+        <Class IRI="#ModeloCalidad"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#CA_PerteneceA_HU"/>
+        <Class IRI="#HistoriaUsuario"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#CM_SeRelacionaCon_A"/>
+        <Class IRI="#Atributo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#FM_Usa_MB"/>
+        <Class IRI="#MedidaBase"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#FM_Usa_MD"/>
+        <Class IRI="#MedidaDerivada"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HU_Tiene_CA"/>
+        <Class IRI="#CriterioAceptacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IR_AsociadaCon_R"/>
+        <Class IRI="#RequisitoSoftware"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IR_AsociadoCon_CM"/>
+        <Class IRI="#ConceptoMedible"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IR_SatisfechaPor_I"/>
+        <Class IRI="#Indicador"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#I_CalculadoCon_MA"/>
+        <Class IRI="#ModeloAnalisis"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MA_Usa_CD"/>
+        <Class IRI="#CriterioDecision"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MB_usa_MM"/>
+        <Class IRI="#MecanismoMedicion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MC_Asociado_CC"/>
+        <Class IRI="#CaracteristicaCalidad"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MC_Evalua_CM"/>
+        <Class IRI="#ConceptoMedible"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MD_CalculadaCon_FM"/>
+        <Class IRI="#FuncionMedicion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#M_Asociada_R"/>
+        <Class IRI="#RequisitoSoftware"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#M_Cuantifica_A"/>
+        <Class IRI="#Atributo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#M_SeBasaEn_M"/>
+        <Class IRI="#Medida"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#M_SeExpresaEn_UM"/>
+        <Class IRI="#UnidadMedida"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#M_Tiene_E"/>
+        <Class IRI="#Escala"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#M_Usa_M"/>
+        <Class IRI="#Medida"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#O_Afecta_CC"/>
+        <Class IRI="#CaracteristicaCalidad"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#R_Aplica_MC"/>
+        <Class IRI="#ModeloCalidad"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#R_Asociado_M"/>
+        <Class IRI="#Medicion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#R_Depende_R"/>
+        <Class IRI="#RequisitoSoftware"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#R_Tiene_A"/>
+        <Class IRI="#Atributo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#R_Tiene_O"/>
+        <Class IRI="#Olor"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#AtrDescripcion"/>
+        <Class IRI="#Atributo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#AtrNombre"/>
+        <Class IRI="#Atributo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CasoUsoActores"/>
+        <Class IRI="#CasoUso"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CasoUsoEscenarioPrincipal"/>
+        <Class IRI="#CasoUso"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CasoUsoEscenariosAlternativos"/>
+        <Class IRI="#CasoUso"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CasoUsoPostcondiciones"/>
+        <Class IRI="#CasoUso"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CasoUsoPrecondiciones"/>
+        <Class IRI="#CasoUso"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ConMedDescripcion"/>
+        <Class IRI="#ConceptoMedible"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ConMedNombre"/>
+        <Class IRI="#ConceptoMedible"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CritDecFormula"/>
+        <Class IRI="#CriterioDecision"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CritDecNombre"/>
+        <Class IRI="#CriterioDecision"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CrtroAcepDescripcion"/>
+        <Class IRI="#CriterioAceptacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CrtroAcepEstado"/>
+        <Class IRI="#CriterioAceptacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#EnfMedNombre"/>
+        <Class IRI="#EnfoqueMedicion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#EscalaDescripcion"/>
+        <Class IRI="#Escala"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#FuncMedFormula"/>
+        <Class IRI="#FuncionMedicion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#InfReqDescripcion"/>
+        <Class IRI="#InformacionRequerida"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#MecMedDescripcion"/>
+        <Class IRI="#MecanismoMedicion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#MecMedNombre"/>
+        <Class IRI="#MecanismoMedicion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#MedicionResultado"/>
+        <Class IRI="#Medicion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#MedidaDescripcion"/>
+        <Class IRI="#Medida"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#MedidaNombre"/>
+        <Class IRI="#Medida"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ModAnalisisFormula"/>
+        <Class IRI="#ModeloAnalisis"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ModCalDescripcion"/>
+        <Class IRI="#ModeloCalidad"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ModCalNombre"/>
+        <Class IRI="#ModeloCalidad"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ReqSoftDescripcion"/>
+        <Class IRI="#RequisitoSoftware"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ReqSoftEstado"/>
+        <Class IRI="#RequisitoSoftware"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ReqSoftNombre"/>
+        <Class IRI="#RequisitoSoftware"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ReqSoftPrioridad"/>
+        <Class IRI="#RequisitoSoftware"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#UniMedDescripcion"/>
+        <Class IRI="#UnidadMedida"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#olorMecanismoDeteccion"/>
+        <Class IRI="#Olor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#olorUbicacion"/>
+        <Class IRI="#Olor"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#AtrDescripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#AtrNombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#CasoUsoActores"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#CasoUsoEscenarioPrincipal"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#CasoUsoEscenariosAlternativos"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#CasoUsoPostcondiciones"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#CasoUsoPrecondiciones"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ConMedDescripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ConMedNombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#CritDecFormula"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#CritDecNombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#CrtroAcepDescripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#CrtroAcepEstado"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#EnfMedNombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#EscalaDescripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#FuncMedFormula"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#InfReqDescripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#MecMedDescripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#MecMedNombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#MedicionResultado"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#MedidaDescripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#MedidaNombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ModAnalisisFormula"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ModCalDescripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ModCalNombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ReqSoftDescripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ReqSoftEstado"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ReqSoftNombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ReqSoftPrioridad"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#UniMedDescripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#olorMecanismoDeteccion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#olorUbicacion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Atributo</IRI>
+        <Literal>Una propiedad física o abstracta medible de una entidad, que es compartida por todas las entidades de una clase de entidad.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CaracteristicaCalidad</IRI>
+        <Literal>Característica que se debe considerar en los requisitos que fueron definidos por las partes interesadas de un sistema.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CasoUso</IRI>
+        <Literal>Representa un escenario específico en el que los actores realizan acciones con el sistema para lograr un objetivo particular.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ConceptoMedible</IRI>
+        <Literal>Relación abstracta entre atributos de entidades y necesidades de información.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CriterioAceptacion</IRI>
+        <Literal>Definen los requisitos sobre cómo debe comportarse la aplicación para que una determinada acción se pueda llevar a cabo, normalmente por parte de un usuario de la aplicación.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CriterioDecision</IRI>
+        <Literal>Umbrales, objetivos o patrones utilizados para determinar la necesidad de actuar o realizar más investigaciones, o para describir el nivel de confianza en un resultado determinado.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EnfoqueMedicion</IRI>
+        <Literal>Secuencia de operaciones destinadas a determinar el valor de un resultado de medición.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Escala</IRI>
+        <Literal>Conjunto de valores con propiedades definidas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FuncionMedicion</IRI>
+        <Literal>Un algoritmo o cálculo realizado para combinar dos o más medidas base o derivadas. (Una función de medición es el enfoque de medición que define una medida derivada).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HistoriaUsuario</IRI>
+        <Literal>Es la descripción simple y comprensible de una funcionalidad que será valiosa para un usuario o comprador de un sistema o software.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Indicador</IRI>
+        <Literal>Es una medida que se deriva de otras medidas utilizando un modelo de análisis como enfoque de medición.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#InformacionRequerida</IRI>
+        <Literal>Conocimiento necesario para gestionar objetivos, metas, riesgos y problemas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MecanismoMedicion</IRI>
+        <Literal>Secuencia lógica de operaciones, descrita genéricamente, utilizada para cuantificar un atributo con respecto a una escala específica. (Un método de medición es el enfoque de medición que define una medida base).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Medicion</IRI>
+        <Literal>Es un conjunto de operaciones que tienen por objeto determinar un valor de un resultado de medición, para un atributo dado de una entidad, utilizando un enfoque de medición.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Medida</IRI>
+        <Literal>El enfoque de medición definido y la escala de medición.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MedidaBase</IRI>
+        <Literal>Una medida de un atributo que no depende de ninguna otra medida y cuyo enfoque de medición es un método de medición.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MedidaDerivada</IRI>
+        <Literal>Una medida que se deriva de otras medidas base o derivadas, utilizando una función de medición como enfoque de medición.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ModeloAnalisis</IRI>
+        <Literal>Algoritmo o cálculo que combina una o más medidas con criterios de decisión asociados. (Un modelo de análisis es el enfoque de medición que define un indicador).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ModeloCalidad</IRI>
+        <Literal>El conjunto de conceptos medibles y las relaciones entre ellos que proporcionan la base para especificar los requisitos de calidad y evaluar la calidad de las entidades de una clase de entidad dada.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Olor</IRI>
+        <Literal>Indicador de una violación de calidad en un artefacto de requisitos, que puede conducir a uno o muchos defectos, con una ubicación concreta y un mecanismo de detección concreto.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RequisitoSoftware</IRI>
+        <Literal>Condición o capacidad que necesita el usuario para resolver un problema o conseguir un objetivo determinado.Condición o capacidad que necesita el usuario para resolver un problema o conseguir un objetivo determinado.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#UnidadMedida</IRI>
+        <Literal>Cantidad particular, definida y adoptada por convención, con la que se comparan otras cantidades del mismo tipo para expresar su magnitud relativa a esa cantidad.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,211 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////                                                   //////////////////////////////////////
+/////////////////        Preguntas de competencia a ReSmOnt         //////////////////////////////////////
+/////////////////                                                   //////////////////////////////////////
+/////////////////        Autor: Mayra Castillo Motta                //////////////////////////////////////
+/////////////////        email: mayracastillo@unicauca.edu.co       //////////////////////////////////////
+/////////////////                                                   //////////////////////////////////////
+/////////////////        Autor: Rubén Dorado Córdoba                //////////////////////////////////////
+/////////////////        email: rubendorado@unicauca.edu.co         //////////////////////////////////////
+/////////////////                                                   //////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+PC01: ¿Qué características de calidad se vieron afectadas por la presencia de los olores detectados en la "HU001"?
+PREFIX : <http://www.semanticweb.org/mayracastillo/ontologies/2023/8/requirements-smells-ontology#>
+SELECT 
+ ?reqName 
+ ?reqDescripcion
+ ?olorName 
+ (GROUP_CONCAT(?caracteristicaNombre; separator=', ') AS ?caracteristicas)
+WHERE {
+?reqId :R_Tiene_O ?olorId.
+?reqId :ReqSoftNombre ?reqName.
+?reqId :ReqSoftDescripcion ?reqDescripcion.
+?reqId :ReqSoftPrioridad ?reqPrioridad.
+?olorId :ConMedNombre ?olorName.
+?olorId :O_Afecta_CC ?ccId.
+?ccId :ConMedNombre ?caracteristicaNombre.
+FILTER (?reqName = 'HU001-Inicio de sesión' ).
+}
+GROUP BY ?olorName ?reqName ?reqDescripcion
+
+
+PC02: Al evaluar todos los requisitos de software, ¿Cuáles son las cinco características de calidad más afectadas por los olores? Mostrar el modelo de calidad al que pertenece cada característica.
+PREFIX : <http://www.semanticweb.org/mayracastillo/ontologies/2023/8/requirements-smells-ontology#>
+SELECT 
+ ?caracteristicaNombre
+ (COUNT(?caracteristicaNombre) AS ?totalAfectaciones) 
+ ?modelName
+WHERE {
+?reqId :R_Tiene_O ?olorId.
+?reqId :ReqSoftNombre ?reqName.
+?reqId :ReqSoftDescripcion ?reqDescripcion.
+?reqId :ReqSoftPrioridad ?reqPrioridad.
+?olorId :O_Afecta_CC ?ccId.
+?ccId :ConMedNombre ?caracteristicaNombre.
+?modCal :MC_Evalua_CM ?ccId2.
+?modCal :ModCalNombre ?modelName.
+FILTER (?ccId2 = ?ccId ).
+}
+GROUP BY ?caracteristicaNombre ?modelName
+ORDER BY DESC(?totalAfectaciones) ?modelName
+
+
+PC03: ¿Qué requisitos de software presentan olores (mínimo uno) cuyo nivel de presencia es "Alto"? ¿Cuál o cuáles son los olores que presentan este nivel por cada requisito de software?
+PREFIX : <http://www.semanticweb.org/mayracastillo/ontologies/2023/8/requirements-smells-ontology#>
+SELECT  
+ ?reqName 
+ ?reqDescripcion
+ (GROUP_CONCAT(?olorName ; separator=', ') AS ?olores)
+WHERE {
+?reqId :R_Tiene_O ?olorId.
+?reqId :ReqSoftNombre ?reqName.
+?reqId :ReqSoftDescripcion ?reqDescripcion.
+?reqId :ReqSoftPrioridad ?reqPrioridad.
+?olorId :ConMedNombre ?olorName.
+FILTER (?reqPrioridad = 'ALTA' ).
+}
+GROUP BY ?reqName ?reqDescripcion
+
+
+PC04: ¿Cuáles son los enfoques de medición que llevan a un requisito de software a incumplir la característica de calidad "Independiente"?
+PREFIX : <http://www.semanticweb.org/mayracastillo/ontologies/2023/8/requirements-smells-ontology#>
+SELECT ?enfoqueMedicionNombre ?enfoqueMedicionDetalle
+WHERE {
+{
+ # Obtener olor que causa afectacion en la caracteristica
+ ?olorId :ConMedNombre ?olorName.
+ ?olorId :O_Afecta_CC ?ccId.
+ ?ccId :ConMedNombre ?caracteristicaNombre.
+ FILTER (?caracteristicaNombre = 'Independiente').
+ 
+ # Llegar a los enfoque de medicion usados por los olores encontrados 
+ ?olorId :CM_SeRelacionaCon_A ?atrId.
+ ?atrId :A_DefinidoPor_M ?medidaId.
+ ?medidaId :MB_usa_MM ?mecDetId.
+ ?mecDetId :EnfMedNombre ?enfoqueMedicionNombre.
+ ?mecDetId :MecMedDescripcion ?enfoqueMedicionDetalle.
+}
+UNION
+{
+ # Obtener olor que causa afectacion en la caracteristica
+ ?olorId :ConMedNombre ?olorName.
+ ?olorId :O_Afecta_CC ?ccId.
+ ?ccId :ConMedNombre ?caracteristicaNombre.
+ FILTER (?caracteristicaNombre = 'Independiente').
+ 
+ # Llegar a las funciones de medicion usadas por los olores encontrados 
+ ?olorId :CM_SeRelacionaCon_A ?atrId.
+ ?atrId :A_DefinidoPor_M ?medidaId.
+ ?medidaId :MD_CalculadaCon_FM ?funcId.
+ ?funcId :EnfMedNombre ?enfoqueMedicionNombre.
+ ?funcId :FuncMedFormula ?enfoqueMedicionDetalle.
+}
+UNION
+{
+ # Obtener olor que causa afectacion en la caracteristica
+ ?olorId :ConMedNombre ?olorName.
+ ?olorId :O_Afecta_CC ?ccId.
+ ?ccId :ConMedNombre ?caracteristicaNombre.
+ FILTER (?caracteristicaNombre = 'Independiente').
+ 
+ # Llegar a los modelos de análisis usados por los olores encontrados 
+ ?olorId :CM_SeRelacionaCon_A ?atrId.
+ ?atrId :A_DefinidoPor_M ?medidaId.
+ ?medidaId :I_CalculadoCon_MA ?maId.
+ ?maId :EnfMedNombre ?enfoqueMedicionNombre.
+ ?maId :ModAnalisisFormula ?enfoqueMedicionDetalle.
+}
+}
+GROUP BY ?enfoqueMedicionNombre ?enfoqueMedicionDetalle
+
+
+PC05: ¿Cuál es el promedio de presencia de los olores detectados en el "CU001"?
+PREFIX : <http://www.semanticweb.org/mayracastillo/ontologies/2023/8/requirements-smells-ontology#>
+SELECT 
+(AVG(xsd:double(?presenciaOlor2) * 100) AS ?promedioPresenciaOlores)
+WHERE {
+?reqId :ReqSoftNombre ?reqName.
+FILTER (?reqName = 'CU001-Registro').
+?reqId :R_Asociado_M ?medicionId.
+?medicionId :MedicionResultado ?presenciaOlor.
+?medicionId :M_SeBasaEn_M ?medidaId.
+?medidaId rdf:type :MedidaDerivada.
+BIND(REPLACE(?presenciaOlor, ",", ".") AS ?presenciaOlor2).
+}
+
+
+PC06: ¿Cuáles son los olores detectados en la Historia de Usuario "HU002", el nivel de presencia de cada uno y que características de calidad se vieron afectadas por la presencia de estos olores?
+PREFIX : <http://www.semanticweb.org/mayracastillo/ontologies/2023/8/requirements-smells-ontology#>
+SELECT 
+ ?reqNombre ?reqDescripcion
+ ?olorNombre
+ ?nivelOlor
+ (GROUP_CONCAT(?caracteristicaNombre; separator=', ') AS ?caracteristicasAfectadas)
+WHERE {
+?infreqId :IR_SatisfechaPor_I ?indId.
+?infreqId :IR_AsociadaCon_R ?reqId.
+?reqMedicionId :R_Asociado_M ?medicionReqId.
+FILTER (?reqMedicionId = ?reqId ).
+?medicionReqId :M_SeBasaEn_M ?medidaMedicionId.
+FILTER (?medidaMedicionId = ?indId ).
+?infreqId :IR_AsociadoCon_CM ?olorId.
+?olorId :O_Afecta_CC ?ccId.
+?ccId :ConMedNombre ?caracteristicaNombre.
+?olorId :ConMedNombre ?olorNombre.
+?reqId :ReqSoftNombre ?reqNombre.
+?reqId :ReqSoftDescripcion ?reqDescripcion.
+?medicionReqId :MedicionResultado ?nivelOlor.
+FILTER (?reqNombre = 'HU002-Domicilios' ).
+}
+GROUP BY 
+ ?reqNombre ?reqDescripcion
+ ?olorNombre
+ ?nivelOlor
+ORDER BY 
+ ?reqNombre 
+ ?olorNombre
+ ?nivelOlor
+
+
+PC07: Generar una lista de las Características de Calidad asociadas al modelo INVEST, identificando y ordenando estas características según la cantidad de olores que las afectan, de mayor a menor incidencia.
+PREFIX : <http://www.semanticweb.org/mayracastillo/ontologies/2023/8/requirements-smells-ontology#>
+SELECT 
+ ?modelName
+ ?olorId 
+ ?olorNombre 
+ (COUNT(?ccNombre) AS ?totalCaracteristicas)
+ (GROUP_CONCAT(DISTINCT ?ccNombre; separator=', ') AS ?caracteristicas) 
+WHERE {
+?olorId :O_Afecta_CC ?ccId.
+?olorId :ConMedNombre ?olorNombre.
+?ccId :ConMedNombre ?ccNombre.
+?modelId :MC_Evalua_CM ?caracId. 
+?modelId :ModCalNombre ?modelName.
+?caracId :ConMedNombre ?caracName.
+FILTER (?caracId = ?ccId ).
+FILTER (?modelName = 'INVEST').
+}
+GROUP BY ?olorId ?olorNombre ?modelName
+ORDER BY DESC(?totalCaracteristicas)
+
+
+PC08: Para cada olor detectado, identificar los requisitos de software de prioridad 'ALTA' que se ven afectados y las Características de Calidad que experimentan impactos negativos como resultado de la presencia de estos olores.
+PREFIX : <http://www.semanticweb.org/mayracastillo/ontologies/2023/8/requirements-smells-ontology#>
+SELECT 
+ ?olorName 
+ ?reqName 
+ ?reqDescripcion
+ (GROUP_CONCAT(?caracteristicaNombre; separator=', ') AS ?caracteristicas)
+WHERE {
+?reqId :R_Tiene_O ?olorId.
+?reqId :ReqSoftNombre ?reqName.
+?reqId :ReqSoftDescripcion ?reqDescripcion.
+?reqId :ReqSoftPrioridad ?reqPrioridad.
+?olorId :ConMedNombre ?olorName.
+?olorId :O_Afecta_CC ?ccId.
+?ccId :ConMedNombre ?caracteristicaNombre.
+FILTER (?reqPrioridad = 'ALTA' ).
+}
+GROUP BY ?olorName ?reqName ?reqDescripcion
